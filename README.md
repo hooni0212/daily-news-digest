@@ -1,2 +1,61 @@
-# daily-news-digest
-Daily email newsletter that delivers keyword-based news digests every morning.
+# Daily News Digest
+
+매일 오전 7시 30분(KST), 사용자가 설정한 키워드와 언어(한국/영문)를 기준으로
+관련 뉴스(키워드별 최대 3건)와 요약, 원문 링크를 이메일로 발송하는 데일리 뉴스 큐레이션 서비스입니다.
+
+> MVP는 RSS 기반 수집 + 스케줄러(배치) + 이메일 발송에 집중합니다.
+> (기사 전문 재배포는 하지 않고 제목/요약/링크만 제공합니다.)
+
+---
+
+## 목표 (MVP)
+
+- 이메일 구독/해지
+- 언어 선택(한국/영문, 복수 가능)
+- 키워드 설정(복수 가능)
+- 매일 07:30 자동 발송
+- 키워드당 최대 3건 뉴스 선정 + 요약 + 링크 발송
+- 발송 로그 및 실패 처리(최소)
+
+---
+
+## 사용자 흐름
+
+1. 사용자가 이메일을 등록하고 언어/키워드를 설정한다.
+2. 서버는 매일 07:30에 설정 기준으로 뉴스를 수집하고 정제한다.
+3. 키워드별 상위 기사 최대 3건을 선정한다.
+4. 이메일 템플릿을 생성하여 발송한다.
+
+---
+
+## 기술 스택 (초안)
+
+- Frontend: (예: Next.js + TypeScript)
+- Backend: (예: Node.js + Express/Nest)
+- DB: (예: PostgreSQL / SQLite)
+- Scheduler: cron (MVP) → 필요 시 Queue(BullMQ 등) 확장
+- Email: (예: SES / SendGrid / Resend)
+
+> 실제 스택이 확정되면 위 항목을 업데이트합니다.
+
+---
+
+## 로컬 실행 (추후 작성)
+
+- 환경변수(.env) 예시
+- 서버 실행 방법
+- 프론트 실행 방법
+- 배치(스케줄러) 로컬 테스트 방법
+
+---
+
+## 협업 규칙
+
+- 브랜치 전략: `main`(배포/릴리즈) + `dev`(통합) + `feat/*` `fix/*` `chore/*`
+- 커밋 메시지: Conventional Commits 사용
+- PR은 최소 1명 리뷰 후 머지 (작아도 PR로 합칩니다)
+
+자세한 내용은 [CONTRIBUTING.md](./CONTRIBUTING.md)를 참고하세요.
+
+---
+
