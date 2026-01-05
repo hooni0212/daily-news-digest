@@ -1,0 +1,23 @@
+{
+  "name": "daily-news-digest",
+  "version": "1.0.0",
+  "description": "매일 오전 7시 30분(KST), 사용자가 설정한 키워드와 언어(한국/영문)를 기준으로 관련 뉴스(키워드별 최대 3건)와 요약, 원문 링크를 이메일로 발송하는 데일리 뉴스 큐레이션 서비스입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hooni0212/daily-news-digest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hooni0212/daily-news-digest/issues"
+  },
+  "homepage": "https://github.com/hooni0212/daily-news-digest#readme",
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
