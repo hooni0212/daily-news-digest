@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# env
+.env
+.env.*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# build outputs (Next/Vite 등)
+dist/
+build/
+.next/
+out/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
