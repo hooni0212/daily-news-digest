@@ -1,0 +1,124 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+p {
+  margin: 0 0 24px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+label {
+  font-size: 14px;
+  color: #222;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="email"], input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.inline {
+  display: flex;
+  gap: 12px; align-items: center;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.chip button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border: 1px solid #222;
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #222;
+}
+
+.help {
+  font-size: 13px;
+  color: #666;
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.status.ok {
+  color: #0a7a2f;
+}
+
+.status.err {
+  color: #b00020;
+}
+
+@media (min-width: 720px) {
+  .row.two { grid-template-columns: 1fr 1fr; }
+}
+
+.keyword-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.keyword-row input {
+  flex: 1;
+  min-width: 0; /* 작은 화면에서 overflow 방지 */
+}
+
+/* 작은 화면에서는 버튼을 아래로 내려도 되고(선택) */
+@media (max-width: 520px) {
+  .keyword-row {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .keyword-row button {
+    width: auto; /* 필요하면 100%로 바꿔도 됨 */
+  }
+}
